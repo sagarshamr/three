@@ -4,8 +4,8 @@
   "description": "fork it and use as a template for your questions or experiments.",
   "main": "2.html",
   "scripts": {
-    "start": "js/server.js"
-    
+    "start": "js/server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
    "dependencies": {
     "stats.js": "0.17.0",
