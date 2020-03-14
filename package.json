@@ -4,8 +4,7 @@
   "description": "fork it and use as a template for your questions or experiments.",
   "main": "2.html",
   "scripts": {
-    "start": "2.html --open",
-    "build": "parcel build 2.html"
+    "start": "server.js"
   },
    "dependencies": {
     "stats.js": "0.17.0",
