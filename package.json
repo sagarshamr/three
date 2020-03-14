@@ -4,7 +4,7 @@
   "description": "fork it and use as a template for your questions or experiments.",
   "main": "2.html",
   "scripts": {
-    "start": "server.js",
+    "start": "js/server.js",
     "dev:all": "concurrently 'npm run server' 'npm run lint:watch' 'PORT=3001 npm run test:watch'",
     "server:watch": "nodemon -w js --exec 'node server'"
   },
