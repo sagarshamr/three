@@ -4,7 +4,7 @@
   "description": "fork it and use as a template for your questions or experiments.",
   "main": "2.html",
   "scripts": {
-    "start": "index.js"
+    "start": "js/server.js"
     
   },
    "dependencies": {
