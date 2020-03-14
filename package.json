@@ -2,9 +2,9 @@
   "name": "threejs-VRML-example",
   "version": "1.0.0",
   "description": "fork it and use as a template for your questions or experiments.",
-  "main": "js/server.js",
+  "main": "2.html",
   "scripts": {
-    "start": "js/server.js",
+    "start": "2.html",
      "heroku-postbuild": "echo Skip builds on Heroku"
   },
    "dependencies": {
