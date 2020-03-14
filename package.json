@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "fork it and use as a template for your questions or experiments.",
   "main": "2.html",
-  "scripts": {
-    "start": "2.html",
-     "heroku-postbuild": "echo Skip builds on Heroku"
-  },
    "dependencies": {
     "stats.js": "0.17.0",
     "three": "0.106.2"
