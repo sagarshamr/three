@@ -9,7 +9,7 @@
     console.log('request starting for ');
     console.log(request);
 
-    var filePath = '.' + request.url;
+    var filePath = './' + request.url;
     if (filePath == './')
         filePath = './2.html';
 
