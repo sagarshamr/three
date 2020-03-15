@@ -1,50 +1,23 @@
- 
-  
- var http = require('http');
- var fs = require('fs');
- var path = require('path');
+ const express = require('express');
+const app = express();
+const path = require('path');
+const router = express.Router();
 
- http.createServer(function (request, response) {
+router.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/2.html'));
+  //__dirname : It will resolve to your project folder.
+});
 
-    console.log('request starting for ');
-    console.log(request);
+router.get('/about',function(req,res){
+  res.sendFile(path.join(__dirname+'/about.html'));
+});
 
-    var filePath = './' + request.url;
-    if (filePath == './')
-        filePath = './2.html';
+router.get('/sitemap',function(req,res){
+  res.sendFile(path.join(__dirname+'/sitemap.html'));
+});
 
-    console.log(filePath);
-    var extname = path.extname(filePath);
-    var contentType = 'text/html';
-    switch (extname) {
-        case '.js':
-            contentType = 'text/javascript';
-            break;
-        case '.css':
-            contentType = 'text/css';
-            break;
-    }
+//add the router
+app.use('/', router);
+app.listen(process.env.port || 3000);
 
-    path.exists(filePath, function(exists) {
-
-        if (exists) {
-            fs.readFile(filePath, function(error, content) {
-                if (error) {
-                    response.writeHead(500);
-                    response.end();
-                }
-                else {
-                    response.writeHead(200, { 'Content-Type': contentType });
-                    response.end(content, 'utf-8');
-                }
-            });
-        }
-        else {
-            response.writeHead(404);
-            response.end();
-        }
-    });
-
- }).listen(process.env.PORT || 5000)
-
- console.log('Server running at http://127.0.0.1:5000/');
+console.log('Running at Port 3000');
