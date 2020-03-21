@@ -3,17 +3,12 @@ const app = express();
 const path = require('path');
 const router = express.Router();
 
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/2.html'));
-  //__dirname : It will resolve to your project folder.
-});
 
-router.get('/about',function(req,res){
-  res.sendFile(path.join(__dirname+'/about.html'));
-});
-
-router.get('/sitemap',function(req,res){
-  res.sendFile(path.join(__dirname+'/sitemap.html'));
+router.get('/', (req, res) => {
+   // res.sendFile('../2.html', { root: __dirname });
+	
+res.sendFile(path.resolve('2.html'));
+	console.log('pah  : '+path.format({root:'/',name:'2',ext :'.html'}))
 });
 
 //add the router
