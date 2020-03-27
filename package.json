@@ -9,10 +9,11 @@
     "server:watch": "nodemon -w js --exec 'node server'"
   },
    "dependencies": {
-    "stats.js": "0.17.0",
-    "three": "0.106.2",
     "ejs": "^2.5.6",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "http-server": "^0.12.1",
+    "stats.js": "0.17.0",
+    "three": "0.106.2"
   },
   "devDependencies": {
     "@types/stats.js": "0.17.0",
