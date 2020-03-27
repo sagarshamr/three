@@ -46,7 +46,7 @@ import { VRMLLoader } from './node_modules/three/examples/jsm/loaders/VRMLLoader
 				camera.add( dirLight.target );
 
 				var loader = new VRMLLoader();
-				loader.load( 'vrml/cylinder.wrl', function ( object ) {
+				loader.load( './vrml/cylinder.wrl', function ( object ) {
 
 					scene.add( object );
 
